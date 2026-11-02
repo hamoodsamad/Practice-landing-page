@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  background-color: #2854fd;
+  height: 100vh;
+}
+nav {
+  border-bottom: 1px solid #3b6aff;
+  position: relative;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  color: whitesmoke;
+  list-style: none;
+  margin-top: 0;
+  padding-top: 25px;
+}
+nav ul .bridge-collective::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: whitesmoke;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.menu-btn button {
+  background: none;
+  border: none;
+  color: whitesmoke;
+  margin-right: 2em;
+  position: relative;
+  z-index: 1;
+}
+.menu-bar {
+  display: none;
+  position: relative;
+}
+.menu-bar ul {
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  right: 0;
+  height: 80vh;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 30px;
+  margin: 0;
+  cursor: pointer;
+  font-size: 1.5rem;
+  background-color: #2854fd;
+  border: 1px solid #3b6aff;
+  list-style: none;
+}
+.menu-bar li {
+  line-height: 45px;
+}
+.menu-bar a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+.menu-bar a:hover {
+  border-bottom: 2px solid whitesmoke;
+  transition: all 0.3 ease-in-out;
+}
+.menu-bar.active {
+  display: flex;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 80vh;
+}
+.sub-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  color: white;
+}
+.stat-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 100px;
+}
+.stat-card h3 {
+  font-size: 30px;
+}
+.card {
+  border: 1px solid #3b6aff;
+}
+.every-child {
+  font-weight: 100;
+  max-width: 308px;
+  color: white;
+}
+.every-child h1 {
+  font-size: 3rem;
+  font-weight: 100;
+}
+.child-0 {
+  padding-left: 35px;
+  display: flex;
+  align-items: center;
+}
+.child-0 p {
+  color: #afcdf5;
+}
+.p-color {
+  color: #afcdf5;
+  margin-top: 0;
+}
+.card-1 {
+  padding: 0 15px;
+}
+.main-footer {
+  color: white;
+  display: flex;
+  padding: 25px 35px;
+  justify-content: space-between;
+  align-items: center;
+}
+body.menu-active {
+  background-color: #171717;
+  transition: background-color 0.3s ease;
+}
+@media (max-width: 375px) {
+  .wrapper {
+    display: flex !important;
+    flex-direction: column;
+    height: auto;
+  }
+  .main-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .sub-container {
+    grid-template-columns: 1fr;
+  }
+  .main-footer {
+    flex-direction: column;
+    align-items: self-start;
+    padding: 10px 10px;
+    margin: 0;
+  }
+  .main-footer p {
+    margin: 5px;
+  }
+  .card p {
+    margin: 5px;
+  }
+  .menu-bar ul {
+    width: 100%;
+    height: 30vh;
+  }
+}
